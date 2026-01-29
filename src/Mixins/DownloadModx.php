@@ -155,7 +155,7 @@ trait DownloadModx
                         unlink("$path/$k/config.core.php");
                     }
                     // Copy each dir to path specified in config file then remove that dir from source
-                    exec("cp -r $path/$k/* $customPath");
+                    exec("cp -r $path/$k/* '$customPath'");
                     exec("rm -rf $path/$k");
                 }
 
